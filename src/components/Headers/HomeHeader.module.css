@@ -1,0 +1,13 @@
+.home_header {
+  height: 14vh;
+  width: 100vw;
+  display:flex;
+  align-items:center;
+  justify-content: space-around;
+  box-shadow: 0 0 .5rem var(--primary);
+}  
+
+.nav_list {
+  display:flex;
+  gap: 1rem;
+}
