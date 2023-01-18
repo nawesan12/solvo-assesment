@@ -12,10 +12,6 @@ const config = withPWA({
   swcMinify: true,
   experimental: {
     appDir: true
-  },
-  i18n: {
-    locales: ["es"],
-    defaultLocale: "es",
   }
 })
 
