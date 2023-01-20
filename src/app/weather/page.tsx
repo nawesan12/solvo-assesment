@@ -2,6 +2,7 @@
 import GoBack from "@/components/Buttons/GoBack"
 import { FormEvent, useRef } from "react"
 import { useRouter } from "next/navigation"
+import GoFavorites from "@/components/Buttons/GoFavorites"
 
 export default function Weather() {
 
@@ -18,6 +19,7 @@ export default function Weather() {
     <>
     <main>
       <GoBack />
+      <GoFavorites />
       <div className="search-city page">
         <h3>Select a city:</h3>
         <form onSubmit={(e) => searchCity(e)}>

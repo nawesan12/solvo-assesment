@@ -1,3 +1,4 @@
+import GoFavorites from "@/components/Buttons/GoFavorites"
 import ForecastBlock from "./ForecastBlock"
 
 const fetchUniqueWeather = async (name: string) => {
@@ -22,6 +23,7 @@ export default async function UniqueCityWeather({ params }: { params: { name: st
 
   return (
     <>
+    <GoFavorites />
     <ForecastBlock currentConditions={weather.currentConditions} cityName={weather.resolvedAddress}/>
     </>
   )
