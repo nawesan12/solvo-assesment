@@ -9,6 +9,10 @@ import { useRouter } from "next/navigation"
 
 export default function RegisterForm(){
 
+  const emailRef = useRef<HTMLInputElement>(null)
+  const nameRef = useRef<HTMLInputElement>(null)
+  const passwordRef = useRef<HTMLInputElement>(null)
+
   const router = useRouter()
   const { setUser } = useContext(UserContext)
 
@@ -16,7 +20,9 @@ export default function RegisterForm(){
     e.preventDefault()
 
     const body = {
-
+      email: emailRef.current?.value,
+      name: nameRef.current?.value,
+      password: passwordRef.current?.value
     }
 
     const res = await localFetch("/api/users/register", "POST", body)
