@@ -1,12 +1,27 @@
-import GoBack from "@/components/Buttons/GoBack";
+const fetchFavorites = async (userId) => {
+  const userRes = await fetch()  
+  const user = await userRes.json()
 
-export default function Favorites() {
+  
+}
+
+export default async function Page() {
+
+  const userFavorites = await fetchFavorites()
+
   return (
-    <main>
-        <GoBack />
-        <section className="page">
-          Favoritos
-        </section>
-    </main>
+    <>
+    <section className="favorites-container">
+      <ul>
+        {
+          user.favorites.map((e, index) => (
+            <li key={index}>
+              {e.name}
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+    </>
   )
 }
