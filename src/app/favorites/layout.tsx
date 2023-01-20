@@ -1,4 +1,4 @@
-import GoBack from "@/components/Buttons/GoBack";
+import GoBack from "@/components/Buttons/GoBack"
 
 export default function FavoritesLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -6,7 +6,6 @@ export default function FavoritesLayout({ children }: { children: React.ReactNod
         <GoBack />
         <section className="page">
           <h1>My Favourites</h1>
-
           {children}
         </section>
     </main>

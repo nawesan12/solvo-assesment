@@ -11,7 +11,10 @@ type UserToUpload = {
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { email, name, password } = req.body
+  const { email, name, password } = JSON.parse(req.body)
+
+  console.log(req.body)
+  console.log(email)
 
   const userAlreadyExists = await prisma.users.findUnique({
     where: { 

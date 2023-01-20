@@ -4,7 +4,7 @@ import styles from "./Forecast.module.css"
 export default function Layout({ children, params }: { children: React.ReactNode, params: { name: string } }) {
 
   const { name } = params
-  const normalizedName = name.split("%20").join(" ")
+  const normalizedName = name.split("%2C").join(",").split("%20").join(" ")
   const today = new Date().toLocaleDateString()
 
   return (

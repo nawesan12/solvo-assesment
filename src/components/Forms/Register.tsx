@@ -25,6 +25,8 @@ export default function RegisterForm(){
       password: passwordRef.current?.value
     }
 
+    console.log(body)
+
     const res = await localFetch("/api/users/register", "POST", body)
 
     if(res.success === false) {
@@ -47,18 +49,22 @@ export default function RegisterForm(){
         type="email" 
         placeholder="Email" 
         name="email"  
+        ref={emailRef}
       />
 
       <label htmlFor="repeat_password">Full Name:</label>
       <input 
         type="text" 
-        placeholder="Full Name" />
+        placeholder="Full Name" 
+        ref={nameRef}
+      />
 
       <label htmlFor="password">Password:</label>
       <input 
         type="password" 
         placeholder="Password"
         name="password"
+        ref={passwordRef}
       />
 
       <input type="submit" value="Log in"/>

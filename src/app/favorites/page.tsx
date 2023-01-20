@@ -1,24 +1,24 @@
-const fetchFavorites = async (userId) => {
-  const userRes = await fetch()  
-  const user = await userRes.json()
+"use client"
+import Link from "next/link"
+import { useContext } from "react"
+import { UserContext } from "@/context/UserContext"
 
+export default function Page() {
   
-}
-
-export default async function Page() {
-
-  const userFavorites = await fetchFavorites()
+  const { user } = useContext(UserContext)
 
   return (
     <>
     <section className="favorites-container">
       <ul>
         {
-          user.favorites.map((e, index) => (
+          user.favorites.length > 0 ? user.favorites.map((city: string, index: number) => (
             <li key={index}>
-              {e.name}
+              <Link href={`/weather/${city}`}>
+                {city}
+              </Link>
             </li>
-          ))
+          )) : <p>{"You don't have any favourites!"}</p>
         }
       </ul>
     </section>
