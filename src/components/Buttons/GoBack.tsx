@@ -18,15 +18,20 @@ export default function GoBack() {
     <style jsx>{`
       button {
         all: unset;
-        color: var(--secondary);
-        background: var(--primary);
-        padding: .4rem 1.25rem;
-        border-radius: 0 0 1rem 0;
+        color: var(--primary);
+        border-bottom: 2px solid var(--primary);
+        padding: .4rem 1rem;
         cursor: pointer;
         font-size:1rem;
         position: fixed;
         top: 0;
         left: 0;
+        transition: all .2s ease;
+      }
+
+      button:hover {
+        border-radius: 0 0 .75rem 0;
+        filter: brightness(1.2)
       }
     `}</style>
     </>

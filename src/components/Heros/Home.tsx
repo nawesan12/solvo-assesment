@@ -1,4 +1,3 @@
-import Image from "next/image"
 import styles from "./HomeHero.module.css"
 
 export default function HomeHero() {
@@ -7,11 +6,9 @@ export default function HomeHero() {
     <section className={styles.home_hero}>
       <h2 className={styles.subtitle}>
         The solvo weather app. <br /> 
-        The forecast you can trust, <br />
-        24/7/365
+        The forecast you can trust <br />
+        <span>24/7/365</span> 
       </h2>
-
-      <Image src="/logo.webp" alt="Solvo Weather App" width={250} height={250}/>
     </section>
     </>
   )

@@ -1,6 +1,6 @@
 "use client"
 import GoBack from "@/components/Buttons/GoBack"
-import { useRef } from "react"
+import { FormEvent, useRef } from "react"
 import { useRouter } from "next/navigation"
 
 export default function Weather() {
@@ -9,19 +9,22 @@ export default function Weather() {
 
   const cityRef = useRef<HTMLInputElement>(null)
 
-  const searchCity = () => {
+  const searchCity = (e: FormEvent) => {
+    e.preventDefault()
     router.push(`/weather/${cityRef.current?.value}`)
   }
 
   return (
     <main>
       <GoBack />
-      <h3>Select a city:</h3>
-      <input type="text" placeholder="Search city" ref={cityRef}/>
+      <div className="search-city page">
+        <h3>Select a city:</h3>
+        <form onSubmit={(e) => searchCity(e)}>
+          <input type="text" placeholder="Search city" ref={cityRef}/>
 
-      <button onClick={searchCity}>
-        Search
-      </button>
+          <input type="submit" value="Search" />
+        </form>      
+      </div>
     </main>
   )
 }

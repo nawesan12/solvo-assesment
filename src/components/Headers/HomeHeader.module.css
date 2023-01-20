@@ -5,9 +5,18 @@
   align-items:center;
   justify-content: space-around;
   box-shadow: 0 0 .5rem var(--primary);
+  font-weight: 500;
 }  
 
 .nav_list {
   display:flex;
+  align-items: center;
   gap: 1rem;
+}
+
+.login {
+  background: var(--primary);
+  color: var(--secondary);
+  padding: .5rem 1rem;
+  border-radius: 1rem;
 }

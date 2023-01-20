@@ -1,11 +1,17 @@
 .home_hero {
-  height:90vh;
+  height:80vh;
   width: 100vw;
   display:flex;
   align-items:center;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .subtitle {
-  font-size: clamp(4vw, 2rem, 5vw)
+  font-size: clamp(4vw, 2rem, 5vw);
+  text-align: center;
+}
+
+.subtitle span {
+  font-size: clamp(5vw, 2.5rem, 6vw);
+  text-shadow: 0 0 .15rem var(--primary);
 }

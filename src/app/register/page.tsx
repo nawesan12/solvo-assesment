@@ -5,7 +5,10 @@ export default function Register() {
   return (
     <main>
       <GoBack />
-      <RegisterForm />
+      <section className="page">
+        <h2>Register</h2>
+        <RegisterForm />
+      </section>
     </main>
   )
 }

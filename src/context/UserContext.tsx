@@ -1,7 +1,7 @@
 "use client"
 import { createContext, useState } from "react"
 
-export const UserContext = createContext({})
+export const UserContext = createContext({} as any)
 
 export const UserProvider = ({ children }: { children: React.ReactNode }) => {
   const [user, setUser] = useState({})

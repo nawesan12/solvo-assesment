@@ -1,0 +1,30 @@
+.form {
+  display:flex;
+  flex-direction:column;
+  gap: 1vh;
+  width: min(90vw, 400px)
+}
+
+.form input {
+  all: unset;
+  border-radius: .5rem;
+  border-bottom: 1px solid #ccc;
+  padding: .5rem .25rem;
+}
+
+.form input:focus {
+  border-bottom: 1px solid var(--primary)
+}
+
+.form input[type="submit"] {
+  background: #000;
+  color: white;
+  text-align:center;
+  font-weight: 500;
+  margin-block: 1rem;
+}
+
+.form label {
+  font-weight: 500;
+  margin-block: .75rem 0;
+}

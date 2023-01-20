@@ -5,7 +5,10 @@ export default function Login() {
   return (
     <main>
       <GoBack />
-      <LoginForm />
+      <section className="page">
+        <h2>Login</h2>
+        <LoginForm />
+      </section>
     </main>
   )
 }

@@ -1,7 +1,8 @@
+import SetFavoriteBtn from "@/components/Buttons/SetFavoriteBtn"
 import Image from "next/image"
 import styles from "./Forecast.module.css"
 
-export default function ForecastBlock({ currentConditions }: any) {
+export default function ForecastBlock({ currentConditions, cityName }: any) {
 
   const  { 
     temp, 
@@ -23,6 +24,9 @@ export default function ForecastBlock({ currentConditions }: any) {
 
   return (
     <section className={styles.forecast_block}>
+      {/* fav button */}
+      <SetFavoriteBtn city={cityName} />
+
       <div className={styles.weather_icon}>
         <figure className={styles.icon}>
           <Image src={`/weather-icons/${icon}.webp`} alt="" height={128} width={128} />  

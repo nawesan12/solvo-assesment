@@ -22,7 +22,7 @@ export default async function UniqueCityWeather({ params }: { params: { name: st
 
   return (
     <>
-    <ForecastBlock currentConditions={weather.currentConditions} />
+    <ForecastBlock currentConditions={weather.currentConditions} cityName={weather.resolvedAddress}/>
     </>
   )
 }
